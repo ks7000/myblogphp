@@ -1,3 +1,27 @@
+<?php
+
+/*
+* file: index.php
+* descripcion: archivo principal
+*
+*/
+
+include 'config/conex.php';
+include 'include/seleccion.php';
+$tituloprincipal = 'Mi Blog Nuevo';
+$subtitulo = 'Mi gran blog con php';
+
+
+$sql = sprintf("SELECT * FROM configuracion WHERE id = '1' ");
+$response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
+$row = mysqli_fetch_array($response,MYSQLI_ASSOC);
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +68,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html"><?php echo $tituloprincipal; ?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -76,9 +100,11 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Clean Blog</h1>
+                    <?php echo'
+                        <h1>'.$row["titulo_blog"].'</h1>
                         <hr class="small">
-                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                        <span class="subheading">'.$subtitulo.'</span>';
+                        ?>
                     </div>
                 </div>
             </div>
@@ -86,54 +112,11 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
-                </div>
-                <hr>
+	<div class="container">
+		<div class="row">
+		    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">    
+    	<?php SELECTOR(); ?>
+
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
@@ -142,7 +125,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>    	
 
     <hr>
 
