@@ -8,8 +8,6 @@
 
 include 'config/conex.php';
 include 'include/seleccion.php';
-$tituloprincipal = 'Mi Blog Nuevo';
-$subtitulo = 'Mi gran blog con php';
 
 
 $sql = sprintf("SELECT * FROM configuracion WHERE id = '1' ");
@@ -36,10 +34,10 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
     <title>Clean Blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo last_version("css/bootstrap.min.css"); ?>" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="<?php echo last_version("css/clean-blog.min.css");?>" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -68,7 +66,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><?php echo $tituloprincipal; ?></a>
+                <a class="navbar-brand" href="index.html"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,7 +101,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
                     <?php echo'
                         <h1>'.$row["titulo_blog"].'</h1>
                         <hr class="small">
-                        <span class="subheading">'.$subtitulo.'</span>';
+                        <span class="subheading">'.$row["subtitulo_blog"].'</span>';
                         ?>
                     </div>
                 </div>
@@ -112,10 +110,10 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
     </header>
 
     <!-- Main Content -->
-	<div class="container">
-		<div class="row">
-		    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">    
-    	<?php SELECTOR(); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <?php SELECTOR($hostname,$user,$password,$db_name); ?>
 
                 <!-- Pager -->
                 <ul class="pager">
@@ -125,7 +123,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
                 </ul>
             </div>
         </div>
-    </div>    	
+    </div>
 
     <hr>
 

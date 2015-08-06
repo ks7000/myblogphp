@@ -8,10 +8,10 @@
  */
 
 
-$hostname   =   'localhost';
-$user       =   'root';
-$password   =   'root';
-$db_name    =   'myblog';
+$hostname   =   '';
+$user       =   '';
+$password   =   '';
+$db_name    =   '';
 
 function CONECTAR_BD($hostname,$user,$password,$db_name){
     function_exists('mysqli_connect') or die ('ERROR:No se tiene soporte actualmente para la base de datos MySQL');
@@ -30,4 +30,7 @@ $mysqli=CONECTAR_BD($hostname,$user,$password,$db_name);
     }
     return;
 }
-?>
+
+//    $sql = sprintf("SELECT * FROM ... WHERE ... ");
+//    $response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
+//    $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
