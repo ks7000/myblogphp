@@ -37,3 +37,8 @@ function prettyDate($date){
 function last_version($file_name) {
     echo $file_name ."?v=". filemtime($file_name);
 }
+
+function DTIME(){
+    $date = date_create();
+    return date_timestamp_get($date);
+}
