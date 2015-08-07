@@ -5,6 +5,21 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
+SET NAMES utf8;
+SET foreign_key_checks = 0;
+SET time_zone = 'SYSTEM';
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `configuracion`;
+CREATE TABLE `configuracion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo_blog` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `subtitulo_blog` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `configuracion` (`id`, `titulo_blog`, `subtitulo_blog`) VALUES
+(1,	'Mi Super Blog con PHP',	'');
 
 DROP TABLE IF EXISTS `publicaciones`;
 CREATE TABLE `publicaciones` (
@@ -24,13 +39,13 @@ INSERT INTO `publicaciones` (`id`, `titulo`, `descripcion`, `contenido`, `id_aut
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre_usuario` varchar(100) COLLATE utf8_unicode_ci NOT NULL,w
+  `nombre_usuario` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `nivel` int(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `usuario` (`id`, `nombre_usuario`, `password`, `nivel`) VALUES
+INSERT INTO `usuarios` (`id`, `nombre_usuario`, `password`, `nivel`) VALUES
 (0,	'usuario',	'e10adc3949ba59abbe56e057f20f883e',	1);
 
 -- 2015-08-06 23:38:55
