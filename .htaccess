@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^([a-zA-Z0-9]+)$ index.php?ver=$1
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php?ver=$1&id=$2
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ index.php?ver=$1&id=$2
+RewriteRule ^(.+)/(img|jpg|png|css|fonts|ico|include|js)/(.*)$ $2/$3 [L]

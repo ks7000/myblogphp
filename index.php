@@ -9,7 +9,6 @@
 include 'config/conex.php';
 include 'include/seleccion.php';
 
-
 $sql = sprintf("SELECT * FROM configuracion WHERE id = '1' ");
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
 $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
@@ -34,10 +33,10 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
     <title>Clean Blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="<?php echo last_version("css/bootstrap.min.css"); ?>" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="<?php echo last_version("css/clean-blog.min.css");?>" rel="stylesheet">
+    <link href="css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -50,7 +49,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<base href="/">
 </head>
 
 <body>
@@ -73,7 +72,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="/inicio/">Home</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
@@ -82,7 +81,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
                         <a href="post.html">Sample Post</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="/cotacto/">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -113,14 +112,8 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <?php SELECTOR($hostname,$user,$password,$db_name); ?>
+        <?php SELECTOR($mysqli,$hostname,$user,$password,$db_name); ?>
 
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
