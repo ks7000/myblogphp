@@ -1,6 +1,6 @@
 <?php
 
-function CONTENIDO_PRINCIPAL($mysqli,$hostname,$user,$password,$db_name,$data){
+function CONTENIDO_PRINCIPAL($mysqli,$hostname,$user,$password,$db_name){
 $sql = sprintf("SELECT * FROM publicaciones ORDER BY id DESC LIMIT 0,10");
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
 while ($row = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
