@@ -1,7 +1,7 @@
 <?php
 
-function CONTENIDO_PRINCIPAL($mysqli,$hostname,$user,$password,$db_name,$data){
-$sql = sprintf("SELECT * FROM publicaciones ORDER BY id DESC LIMIT 0,10");
+function HISTORIAL($mysqli,$hostname,$user,$password,$db_name){
+$sql = sprintf("SELECT * FROM publicaciones ORDER BY id DESC");
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
 while ($row = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
     echo'
@@ -10,9 +10,6 @@ while ($row = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
             <h2 class="post-title">
                 '.$row["titulo"].'
             </h2>
-            <h3 class="post-subtitle">
-                '.$row["descripcion"].'
-            </h3>
         </a>
         <p class="post-meta">Posted by';
 $id = $row["id_autor"];
@@ -25,15 +22,8 @@ echo'        <a href="#0">'.$nombreU["nombre_usuario"].'</a>
     </div>
     <hr>';
 }//fin while
-echo'
-    <!-- Pager -->
-    <ul class="pager">
-        <li class="next">
-            <a href="index.php?ver=historial">Ver Historial &rarr;</a>
-        </li>
-    </ul>
-';
     return;
 }
+
 
 ?>

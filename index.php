@@ -13,9 +13,6 @@ $sql = sprintf("SELECT * FROM configuracion WHERE id = '1' ");
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
 $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
 
-
-
-
 ?>
 
 
@@ -65,23 +62,20 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"></a>
+                <a class="navbar-brand" href="index.php?ver=inicio"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/inicio/">Home</a>
+                        <a href="index.php?ver=inicio">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="index.php?ver=nosotros">About</a>
                     </li>
                     <li>
-                        <a href="post.html">Sample Post</a>
-                    </li>
-                    <li>
-                        <a href="/cotacto/">Contact</a>
+                        <a href="index.php?ver=contacto">Contact</a>
                     </li>
                 </ul>
             </div>
