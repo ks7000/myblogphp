@@ -3,6 +3,8 @@ include 'libs/libs.php';
 include 'contenido.php';
 include 'contacto.php';
 include 'publicacion.php';
+include 'historial.php';
+include 'nosotros.php';
 
 function SELECTOR($mysqli,$hostname,$user,$password,$db_name){
 
@@ -20,6 +22,12 @@ function SELECTOR($mysqli,$hostname,$user,$password,$db_name){
     break;
     case 'publicacion':
         CONTENIDO_PUBLICACION($mysqli,$hostname,$user,$password,$db_name);
+    break;
+    case 'historial':
+        HISTORIAL($mysqli,$hostname,$user,$password,$db_name);
+    break;
+    case 'nosotros':
+        NOSOTROS($mysqli,$hostname,$user,$password,$db_name);
     break;
     default:
         CONTENIDO_PRINCIPAL($mysqli,$hostname,$user,$password,$db_name);
