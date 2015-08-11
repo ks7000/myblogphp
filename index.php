@@ -49,7 +49,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<base href="/">
+<base href="/myblogphp/">
 </head>
 
 <body>
