@@ -7,13 +7,8 @@
  * @version 0.1
  */
 
-
-$hostname   =   'localhost';
-$user       =   'root';
-$password   =   'root';
-$db_name    =   'myblog';
-
 function CONECTAR_BD($hostname,$user,$password,$db_name){
+    require 'include/datos.php';
     function_exists('mysqli_connect') or die ('ERROR:No se tiene soporte actualmente para la base de datos MySQL');
     global $mysqli;
     $mysqli=mysqli_connect($hostname,$user,$password,$db_name)

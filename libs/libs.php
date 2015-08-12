@@ -95,3 +95,5 @@ function FSPATH($str) {
     $str = str_replace(' ', '-', $str);
 return substr($str, 0, 30);
 }
+
+?>

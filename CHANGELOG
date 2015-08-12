@@ -1,7 +1,8 @@
-*   [31m0147e8d[m - [32mabr4xas[m - [33m (HEAD -> master)[m Merge branch 'master' of https://github.com/abr4xas/myblogphp [32m(84 seconds ago)[m
+* [31m21490a3[m - [32mabr4xas[m - [33m (HEAD -> master, origin/master, origin/HEAD)[m fix error Missing argument in contenido.php [32m(4 hours ago)[m
+*   [31m0147e8d[m - [32mabr4xas[m - [33m[m Merge branch 'master' of https://github.com/abr4xas/myblogphp [32m(4 hours ago)[m
 |\  
-| * [31mde59364[m - [32mabr4xas[m - [33m (origin/master, origin/HEAD)[m algunos cambios menores en el codigo :smile: [32m(34 minutes ago)[m
-* | [31m43636e6[m - [32mabr4xas[m - [33m[m cambios [32m(2 minutes ago)[m
+| * [31mde59364[m - [32mabr4xas[m - [33m[m algunos cambios menores en el codigo :smile: [32m(4 hours ago)[m
+* | [31m43636e6[m - [32mabr4xas[m - [33m[m cambios [32m(4 hours ago)[m
 |/  
 * [31m264de99[m - [32mabr4xas[m - [33m[m agregada informacion importante en el README [32m(4 days ago)[m
 * [31m38c2256[m - [32mabr4xas[m - [33m[m cambios en la estructura, ya puede leer los datos desde la base de datos [32m(4 days ago)[m

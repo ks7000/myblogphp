@@ -5,14 +5,17 @@
 * descripcion: archivo principal
 *
 */
-
+require 'include/datos.php';
 include 'config/conex.php';
 include 'include/seleccion.php';
 
 $sql = sprintf("SELECT * FROM configuracion WHERE id = '1' ");
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
 $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
-
+session_start();
+//if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+//    header('location:index.php?ver=login&error=2');
+//}
 ?>
 
 
@@ -77,6 +80,28 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
                     <li>
                         <a href="index.php?ver=contacto">Contact</a>
                     </li>
+                    <?php
+if ((isset($_SESSION["nivel"])) && $_SESSION["nivel"] == 1){
+
+   echo'<li>
+            <a href="index.php?ver=nuevo-post">Agregar Post</a>
+        </li>';
+}
+if ((isset($_SESSION['login'])) && ($_SESSION['login']==1)) {
+       echo'<li>
+                <a href="logout.php">Salir</a>
+            </li>';
+}else{
+echo'
+    <li>
+        <a href="index.php?ver=login">Ingresar</a>
+    </li>
+';
+}
+
+
+                    ?>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -158,7 +183,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+<!--    <script src="js/clean-blog.min.js"></script>-->
 
 </body>
 
