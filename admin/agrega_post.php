@@ -1,7 +1,8 @@
 <?php
-
-
 function NUEVO_POST($mysqli,$hostname,$user,$password,$db_name){
+if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+    header('location:index.php?ver=login&error=2');
+}
 echo'
 <div class="page-header">
   <h1 class="text-center">Agregar una nueva publicacion</h1>
@@ -20,9 +21,7 @@ echo'
     <textarea class="form-control" id="summernote" name="contenido"></textarea>
   </div>
   <button type="submit" class="btn btn-default">Enviar publicacion</button>
-</form>
-';
-
+</form>';
     return;
 }
 

@@ -15,10 +15,10 @@ mysqli_real_escape_string($mysqli,$username),
 mysqli_real_escape_string($mysqli,$password));
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name,$mysqli);
 if ($rows = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
-    $_SESSION['id']         = $login["id"];
-    $_SESSION['username']   = $login["nombre_usuario"];
-    $_SESSION['mail']       = $login["email"];
-    $_SESSION['nivel']      = $login["nivel"];
+    $_SESSION['id']         = $rows["id"];
+    $_SESSION['username']   = $rows["nombre_usuario"];
+    $_SESSION['mail']       = $rows["email"];
+    $_SESSION['nivel']      = $rows["nivel"];
     $_SESSION['login']      = 1;
     header('location:index.php');
 } else {

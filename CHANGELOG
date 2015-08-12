@@ -1,5 +1,6 @@
-* [31m8fc9e60[m - [32mabr4xas[m - [33m (HEAD -> master, origin/master, origin/HEAD)[m fix de errores, se agrega plantilla para agregar post todo en /admin [32m(2 minutes ago)[m
-* [31m46c5c14[m - [32mabr4xas[m - [33m[m cambios en el sistema, agregado login (sencillo) :smile: [32m(76 minutes ago)[m
+* [31mb1d0635[m - [32mabr4xas[m - [33m (HEAD -> master, origin/master, origin/HEAD)[m agregado estilos de summernote, se eliminan otros que no son necesarios [32m(6 minutes ago)[m
+* [31m8fc9e60[m - [32mabr4xas[m - [33m[m fix de errores, se agrega plantilla para agregar post todo en /admin [32m(8 minutes ago)[m
+* [31m46c5c14[m - [32mabr4xas[m - [33m[m cambios en el sistema, agregado login (sencillo) :smile: [32m(82 minutes ago)[m
 * [31m21490a3[m - [32mabr4xas[m - [33m[m fix error Missing argument in contenido.php [32m(5 hours ago)[m
 *   [31m0147e8d[m - [32mabr4xas[m - [33m[m Merge branch 'master' of https://github.com/abr4xas/myblogphp [32m(5 hours ago)[m
 |\  
