@@ -16,11 +16,11 @@ if (!empty($_GET['error'])) {
 echo'
 <h2>Ingresar</h2>
         <form action="autentica.php" method="post" role="form">
-          <div class="form-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
             <label for="username">Username:</label>
             <input type="text" class="form-control" name="username" placeholder="Enter username" required />
           </div>
-          <div class="form-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
             <label for="pwd">Password:</label>
             <input type="password" class="form-control" name="password" placeholder="Enter password" required />
           </div>
