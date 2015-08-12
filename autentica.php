@@ -14,10 +14,7 @@ $sql = sprintf("SELECT * FROM usuarios WHERE email = '%s' && password = '%s'",
 mysqli_real_escape_string($mysqli,$username),
 mysqli_real_escape_string($mysqli,$password));
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name,$mysqli);
-$login = mysqli_fetch_array($response,MYSQLI_ASSOC);
-
-if ($rowcount=mysqli_num_rows($response) == 1) {
-//    die($rowcount);
+if ($rows = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
     $_SESSION['id']         = $login["id"];
     $_SESSION['username']   = $login["nombre_usuario"];
     $_SESSION['mail']       = $login["email"];

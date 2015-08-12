@@ -7,6 +7,7 @@ include 'publicacion.php';
 include 'historial.php';
 include 'nosotros.php';
 include 'login.php';
+include 'admin/agrega_post.php';
 
 function SELECTOR($mysqli,$hostname,$user,$password,$db_name){
 
@@ -33,6 +34,9 @@ function SELECTOR($mysqli,$hostname,$user,$password,$db_name){
     break;
     case 'login':
         INGRESAR($mysqli,$hostname,$user,$password,$db_name);
+    break;
+    case 'nuevo-post':
+        NUEVO_POST($mysqli,$hostname,$user,$password,$db_name);
     break;
     default:
         CONTENIDO_PRINCIPAL($mysqli,$hostname,$user,$password,$db_name);
