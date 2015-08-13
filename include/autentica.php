@@ -1,25 +1,23 @@
 <?php
-include 'datos.php';
+session_start();
 include '../config/conex.php';
 
-$mysqli=CONECTAR_BD($hostname,$user,$password,$db_name);
+$username = trim($_POST['username']);
+$pass = md5(trim($_POST['password']));
 
-session_start();
-$username = $_POST['username'];
-$pass = $_POST['password'];
-$password = md5($pass);
 $sql = sprintf("SELECT * FROM usuarios WHERE email = '%s' && password = '%s'",
 mysqli_real_escape_string($mysqli,$username),
 mysqli_real_escape_string($mysqli,$password));
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name,$mysqli);
+
 if ($rows = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
     $_SESSION['id']         = $rows["id"];
     $_SESSION['username']   = $rows["nombre_usuario"];
     $_SESSION['mail']       = $rows["email"];
     $_SESSION['nivel']      = $rows["nivel"];
     $_SESSION['login']      = 1;
-    header('location:index.php');
+    header('location:../index.php');
 } else {
-    header('location:index.php?ver=login&error=1');
+    header('location:../index.php?ver=login&error=1');
 }
 ?>
