@@ -132,6 +132,13 @@ function HISTORIAL($mysqli,$hostname,$user,$password,$db_name){
         $nombreU = mysqli_fetch_array($responseusuario,MYSQLI_ASSOC);
         echo'        <a href="#0">'.$nombreU["nombre_usuario"].'</a>
         on '.prettyDate(date("Y-m-d H:i:s",$row["fecha"])).'</p>
+        <hr>';
+if ((isset($_SESSION["nivel"])) && $_SESSION["nivel"] == 1){
+    echo'
+    	<a href="index.php?ver=ActualizarPublicacion&id='.$row["id"].'">Editar Publicacion</a>
+    	';
+}
+echo'             
     </div>
     <hr>';
     }//fin while
@@ -152,9 +159,10 @@ function INGRESAR($mysqli,$hostname,$user,$password,$db_name){
         }
     }
     echo'
-<h2>Ingresar</h2>
-<div id="InformacionIngreso"></div>
-<form enctype="application/x-www-form-urlencoded" action="javascript:void(0)" role="form" method="post" onsubmit="return Ingreso(); return document.MM_returnValue" name="FormIngreso" id="FormIngreso">
+<div class="page-header">
+  <h1 class="text-center">Ingresar</h1>
+</div>
+<form enctype="application/x-www-form-urlencoded" action="autentica.php" role="form" method="post" >
           <div class="form-group col-xs-12 floating-label-form-group controls">
             <label for="username">Username:</label>
             <input type="text" class="form-control" name="username" placeholder="Enter username" required />
@@ -178,3 +186,5 @@ function NOSOTROS($mysqli,$hostname,$user,$password,$db_name){
 
     return;
 }
+
+?>

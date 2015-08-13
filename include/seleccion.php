@@ -2,7 +2,7 @@
 
 include 'libs/libs.php';
 include 'funciones.php';
-include 'admin/agrega_post.php';
+include 'admin/funciones.php';
 
 function SELECTOR($mysqli,$hostname,$user,$password,$db_name){
 
@@ -33,6 +33,9 @@ function SELECTOR($mysqli,$hostname,$user,$password,$db_name){
     case 'nuevo-post':
         NUEVO_POST($mysqli,$hostname,$user,$password,$db_name);
     break;
+    case 'ActualizarPublicacion':
+        ACTUALIZAR_POST($mysqli,$hostname,$user,$password,$db_name);
+    break;    
     default:
         CONTENIDO_PRINCIPAL($mysqli,$hostname,$user,$password,$db_name);
     }
