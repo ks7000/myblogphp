@@ -1,12 +1,13 @@
-* [31meb5d9ed[m - [32mángel[m - [33m (HEAD -> master, origin/master, origin/HEAD)[m Delete conex.php [32m(44 seconds ago)[m
-* [31m90f0197[m - [32mabr4xas[m - [33m[m actualizado config/conex-sample.php [32m(13 minutes ago)[m
-* [31m6d04156[m - [32mabr4xas[m - [33m[m agregado gitignore en /config :smile: [32m(14 minutes ago)[m
-* [31mc4254c3[m - [32mabr4xas[m - [33m[m actualizando repo [32m(24 minutes ago)[m
+* [31m78dcc84[m - [32mabr4xas[m - [33m (HEAD -> master, origin/master, origin/HEAD)[m actualizado repo [32m(8 minutes ago)[m
+* [31meb5d9ed[m - [32mángel[m - [33m[m Delete conex.php [32m(9 minutes ago)[m
+* [31m90f0197[m - [32mabr4xas[m - [33m[m actualizado config/conex-sample.php [32m(21 minutes ago)[m
+* [31m6d04156[m - [32mabr4xas[m - [33m[m agregado gitignore en /config :smile: [32m(22 minutes ago)[m
+* [31mc4254c3[m - [32mabr4xas[m - [33m[m actualizando repo [32m(32 minutes ago)[m
 * [31m08faf2f[m - [32mabr4xas[m - [33m[m agregando estilos al formulario de ingreso [32m(3 hours ago)[m
-* [31m20cf2b6[m - [32mabr4xas[m - [33m[m agregando estilos al form de nuevas publicaciones :smile: [32m(10 hours ago)[m
-* [31m6f3e147[m - [32mabr4xas[m - [33m[m limpiando directorio de archivos innecesarios [32m(22 hours ago)[m
-* [31m4c5a0f4[m - [32mabr4xas[m - [33m[m fix error de sesion que permitia ingresar a la administracion sin pasar por login :satisfied: y se actualiza variables en autentica.php que habia olvidado cambiar :joy: [32m(22 hours ago)[m
-* [31m0d1827f[m - [32mabr4xas[m - [33m[m fix error de sesion que permitia ingresar a la administracion sin pasar por login :satisfied: y se actualiza variables en autentica.php que habia olvidado cambiar :joy: [32m(22 hours ago)[m
+* [31m20cf2b6[m - [32mabr4xas[m - [33m[m agregando estilos al form de nuevas publicaciones :smile: [32m(11 hours ago)[m
+* [31m6f3e147[m - [32mabr4xas[m - [33m[m limpiando directorio de archivos innecesarios [32m(23 hours ago)[m
+* [31m4c5a0f4[m - [32mabr4xas[m - [33m[m fix error de sesion que permitia ingresar a la administracion sin pasar por login :satisfied: y se actualiza variables en autentica.php que habia olvidado cambiar :joy: [32m(23 hours ago)[m
+* [31m0d1827f[m - [32mabr4xas[m - [33m[m fix error de sesion que permitia ingresar a la administracion sin pasar por login :satisfied: y se actualiza variables en autentica.php que habia olvidado cambiar :joy: [32m(23 hours ago)[m
 * [31mb1d0635[m - [32mabr4xas[m - [33m[m agregado estilos de summernote, se eliminan otros que no son necesarios [32m(23 hours ago)[m
 * [31m8fc9e60[m - [32mabr4xas[m - [33m[m fix de errores, se agrega plantilla para agregar post todo en /admin [32m(23 hours ago)[m
 * [31m46c5c14[m - [32mabr4xas[m - [33m[m cambios en el sistema, agregado login (sencillo) :smile: [32m(24 hours ago)[m

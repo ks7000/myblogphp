@@ -1,12 +1,7 @@
 <?php
 
 include 'libs/libs.php';
-include 'contenido.php';
-include 'contacto.php';
-include 'publicacion.php';
-include 'historial.php';
-include 'nosotros.php';
-include 'login.php';
+include 'funciones.php';
 include 'admin/agrega_post.php';
 
 function SELECTOR($mysqli,$hostname,$user,$password,$db_name){
