@@ -7,7 +7,8 @@ echo'
 <div class="page-header">
   <h1 class="text-center">Agregar una nueva publicacion</h1>
 </div>
-<form>
+<div id="InformacionPublicacion"></div>
+<form enctype="application/x-www-form-urlencoded" action="javascript:void(0)" role="form" method="post" onsubmit="return AgregaPost(); return document.MM_returnValue" name="FormNuevoPost" id="FormNuevoPost">
   <div class="form-group col-xs-12 floating-label-form-group controls">
     <label for="titulop">Titulo</label>
     <input type="text" class="form-control" id="titulop" name="titulop" placeholder="Titulo de la publicacion">

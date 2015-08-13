@@ -15,7 +15,8 @@ if (!empty($_GET['error'])) {
 }
 echo'
 <h2>Ingresar</h2>
-        <form action="autentica.php" method="post" role="form">
+<div id="InformacionIngreso"></div>
+<form enctype="application/x-www-form-urlencoded" action="javascript:void(0)" role="form" method="post" onsubmit="return Ingreso(); return document.MM_returnValue" name="FormIngreso" id="FormIngreso">
           <div class="form-group col-xs-12 floating-label-form-group controls">
             <label for="username">Username:</label>
             <input type="text" class="form-control" name="username" placeholder="Enter username" required />

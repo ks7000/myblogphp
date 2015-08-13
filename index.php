@@ -156,6 +156,7 @@ if ((isset($_SESSION['login'])) && ($_SESSION['login']==1)) {
         <script src="js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/validacion.js"></script>
         <?php
 if ((isset($_SESSION['login'])) && ($_SESSION['login']==1)) {
     echo'<!-- Custom Theme JavaScript -->

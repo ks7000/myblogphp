@@ -1,8 +1,6 @@
 <?php
-require( 'helper/php_error.php' );
-\php_error\reportErrors();
-include 'include/datos.php';
-include 'config/conex.php';
+include '../include/datos.php';
+include '../config/conex.php';
 
 $mysqli=CONECTAR_BD($hostname,$user,$password,$db_name);
 

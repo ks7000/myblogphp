@@ -5,8 +5,11 @@ $id_p = $_GET["id"];// obtenemos la id de la publicacion para buscarla en la tab
 $sql = sprintf("SELECT * FROM publicaciones WHERE id = '%s' ",
 mysqli_real_escape_string($mysqli,$id_p)); // ver http://php.net/manual/es/mysqli.real-escape-string.php
 $response =  QUERYBD($sql,$hostname,$user,$password,$db_name);
-while ($row = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
+$row = mysqli_fetch_array($response,MYSQLI_ASSOC);
     echo'
+    <ol class="breadcrumb">
+      <li><a href="index.php">Regresar al Inicio</a></li>
+    </ol>
     <div class="post-preview">
             <h2 class="post-title">
                 '.$row["titulo"].'
@@ -24,8 +27,6 @@ $nombreU = mysqli_fetch_array($response,MYSQLI_ASSOC);
 echo'        <a href="#0">'.$nombreU["nombre_usuario"].'</a>
         on '.prettyDate(date("Y-m-d H:i:s",$row["fecha"])).'</p>
     </div>';
-}//fin while
-
     return;
 }
 
