@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'include/datos.php';
 include 'config/conex.php';
 $mysqli=CONECTAR_BD($hostname,$user,$password,$db_name);
 $username = trim($_POST['username']);
