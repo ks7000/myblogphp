@@ -132,6 +132,13 @@ function HISTORIAL($mysqli,$hostname,$user,$password,$db_name){
         $nombreU = mysqli_fetch_array($responseusuario,MYSQLI_ASSOC);
         echo'        <a href="#0">'.$nombreU["nombre_usuario"].'</a>
         on '.prettyDate(date("Y-m-d H:i:s",$row["fecha"])).'</p>
+        <hr>';
+if ((isset($_SESSION["nivel"])) && $_SESSION["nivel"] == 1){
+    echo'
+    	<a href="index.php?ver=ActualizarPublicacion&id='.$row["id"].'">Editar Publicacion</a>
+    	';
+}
+echo'             
     </div>
     <hr>';
     }//fin while
