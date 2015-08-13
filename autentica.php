@@ -16,8 +16,8 @@ if ($rows = mysqli_fetch_array($response,MYSQLI_ASSOC)) {
     $_SESSION['mail']       = $rows["email"];
     $_SESSION['nivel']      = $rows["nivel"];
     $_SESSION['login']      = 1;
-    header('location:../index.php');
+    header('location:index.php');
 } else {
-    header('location:../index.php?ver=login&error=1');
+    header('location:index.php?ver=login&error=1');
 }
 ?>
