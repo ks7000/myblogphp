@@ -100,7 +100,7 @@ $row = mysqli_fetch_array($response,MYSQLI_ASSOC);
             <h3 class="post-subtitle">
                 '.$row["descripcion"].'
             </h3>
-            '.$row["contenido"].'
+            '.$row["contenido"].'<hr>
         <p class="post-meta">Posted by';
 $id = $row["id_autor"];
 $sql = sprintf("SELECT nombre_usuario FROM usuarios WHERE id = '%s' ",
