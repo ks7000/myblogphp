@@ -7,6 +7,11 @@
  * @version 0.1
  */
 
+$hostname   =   '';
+$user       =   '';
+$password   =   '';
+$db_name    =   '';
+
 function CONECTAR_BD($hostname,$user,$password,$db_name){
     function_exists('mysqli_connect') or die ('ERROR:No se tiene soporte actualmente para la base de datos MySQL');
     global $mysqli;
